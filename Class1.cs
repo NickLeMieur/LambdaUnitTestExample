@@ -27,7 +27,7 @@ namespace LambdaUnitTestExample.Tests
                 }
             }
         }
-        public enum Condition
+        public enum Conditions
         {
             EXCELLENT,
             GOOD,
@@ -35,13 +35,13 @@ namespace LambdaUnitTestExample.Tests
             BAD
         }
 
-        public Condition Conditions;
+        public Conditions Condition;
 
-        public Car(string mak, Condition cond)
+        public Car(string mak, Conditions cond)
         {
             Make = mak;
             Speed = 0;
-            Conditions = cond;
+            Condition = cond;
         }
     }
 }        
