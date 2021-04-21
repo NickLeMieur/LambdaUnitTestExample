@@ -1,6 +1,5 @@
 using System;
 using Xunit;
-using static LambdaUnitTestExample.Tests.Car;
 
 // Note: Your project should be named LambdaUnitTestExample.
 namespace LambdaUnitTestExample.Tests
