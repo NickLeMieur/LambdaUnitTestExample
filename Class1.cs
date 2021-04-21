@@ -4,6 +4,14 @@ using System.Text;
 
 namespace LambdaUnitTestExample.Tests
 {
+
+    public enum Condition
+    {
+        EXCELLENT,
+        GOOD,
+        FAIR,
+        BAD
+    }
     public class Car
     {
         public string Make;
@@ -27,17 +35,10 @@ namespace LambdaUnitTestExample.Tests
                 }
             }
         }
-        public enum Conditions
-        {
-            EXCELLENT,
-            GOOD,
-            FAIR,
-            BAD
-        }
 
-        public Conditions Condition;
+        public Condition Condition;
 
-        public Car(string mak, Conditions cond)
+        public Car(string mak, Condition cond)
         {
             Make = mak;
             Speed = 0;

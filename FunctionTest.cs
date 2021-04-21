@@ -11,19 +11,19 @@ namespace LambdaUnitTestExample.Tests
         public void TestConstructor()
         {
             // Hint: Conditions is an enum.
-            Car car = new Car("Chevy", Conditions.EXCELLENT);
+            Car car = new Car("Chevy", Condition.EXCELLENT);
 
             Assert.Equal("Chevy", car.Make);
             Assert.Equal(0, car.Speed);
-            Assert.Equal(Conditions.EXCELLENT, car.Condition);
+            Assert.Equal(Condition.EXCELLENT, car.Condition);
         }
 
         [Theory]
-        [InlineData(Conditions.EXCELLENT)]
-        [InlineData(Conditions.GOOD)]
-        [InlineData(Conditions.FAIR)]
-        [InlineData(Conditions.BAD)]
-        public void TestConditions(Conditions c)
+        [InlineData(Condition.EXCELLENT)]
+        [InlineData(Condition.GOOD)]
+        [InlineData(Condition.FAIR)]
+        [InlineData(Condition.BAD)]
+        public void TestConditions(Condition c)
         {
             Assert.True(Convert.ToInt32(c) >= 0);
         }
@@ -32,7 +32,7 @@ namespace LambdaUnitTestExample.Tests
         public void TestSpeed()
         {
             // Hint: Speed is a C# Property.
-            Car car = new Car("Ford", Conditions.BAD);
+            Car car = new Car("Ford", Condition.BAD);
             Assert.Equal(0, car.Speed);
             car.Speed = 25;
             Assert.Equal(25, car.Speed);
